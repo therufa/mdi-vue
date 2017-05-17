@@ -1,0 +1,32 @@
+{
+  "name": "mdi-vue",
+  "version": "0.0.1",
+  "description": "Material Design Icons for Vue.js",
+  "main": "index.js",
+  "repository": "git@github.com:therufa/mdi-vue.git",
+  "homepage": "github.com/therufa/mdi-vue",
+  "keywords": [
+    "mdi",
+    "vue",
+    "vuejs",
+    "vue.js",
+    "material",
+    "design",
+    "icons",
+    "icon"
+  ],
+  "bugs": {
+    "url": "https://github.com/therufa/mdi-vue/issues"
+  },
+  "author": "Attila Max Ruf <attila.ruf@oden.hu>",
+  "license": "(MIT + OFL 1.1)",
+  "scripts": {
+    "clean": "rm -rf build dist",
+    "prebuild": "git submodule update --init && npm run clean && mkdir build dist",
+    "build": "node build.js && babel build --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "peerDependencies": {
+    "vue": "^2.3.3"
+  }
+}

@@ -1,0 +1,3 @@
+[submodule "mdi"]
+	path = mdi
+	url = git@github.com:Templarian/MaterialDesign.git
