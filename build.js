@@ -16,7 +16,7 @@ const buildIcons = (components) => fs.readFile(path.resolve('./build.tpl'), (err
     fs.writeFileSync(
       path.join(buildPath,`${component.name}Icon.js`),
       tpl.toString('utf-8')
-        .replace(/\{\{name\}\}/g, component.name.toLowerCase())
+        .replace(/\{\{icon\}\}/g, component.name.toLowerCase())
         .replace(/\{\{path\}\}/g, component.path)
     )
   }
