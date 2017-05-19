@@ -19,13 +19,13 @@ const copyPackage = () => fs.readFile(pkgFile, (err, pkgRaw) => {
   const pkgObj = JSON.parse(pkgRaw)
 
   // Nobody cares for errors... nobody
-  fs.writeFile(path.resolve(distPath, 'package.json'), JSON.stringify(Object.keys(pkgObj)
-    .map((key) => {
-      if (!/script|devDependencies|dependencies/.test(key)) {
-        return pkgObj[key]
-      }
-    })
-  ))
+  Object.keys(pkgObj).map((key) => {
+    if (/devDependencies|dependencies/.test(key)) {
+      delete pkgObj[key]
+    }
+  })
+
+  fs.writeFileSync(path.resolve(distPath, 'package.json'), JSON.stringify(pkgObj))
 })
 
 const buildIcons = (components) => fs.readFile(path.resolve('./build.tpl'), (err, tpl) => {
