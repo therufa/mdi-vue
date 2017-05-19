@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/therufa/mdi-vue/compare/v0.2.1...v0.2.2) (2017-05-19)
+
+
+### Features
+
+* add babel config and es plugins ([21715ed](https://github.com/therufa/mdi-vue/commit/21715ed))
+
+
+
 <a name="0.2.1"></a>
 ## 0.2.1 (2017-05-19)
 
