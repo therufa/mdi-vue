@@ -23,7 +23,7 @@
   "scripts": {
     "clean": "rm -rf build dist",
     "prebuild": "git submodule update --init && npm run clean && mkdir build dist",
-    "build": "node build.js && babel build --out-dir dist && cp *LICENSE dist",
+    "build": "node build.js && babel build --out-dir dist && cp *LICENSE dist && cp *.md dist",
     "prepublish": "cd .. && npm run build && cd ./dist"
   },
   "peerDependencies": {
