@@ -19,7 +19,7 @@
     "url": "https://github.com/therufa/mdi-vue/issues"
   },
   "author": "Attila Max Ruf <attila.ruf@oden.hu>",
-  "license": "MIT",
+  "license": "(MIT AND OFL-1.1)",
   "scripts": {
     "clean": "rm -rf build dist",
     "prebuild": "git submodule update --init && npm run clean && mkdir build dist",
