@@ -31,3 +31,9 @@ new Vue({
 
 
 Heavily inspired by [mdi-react](https://github.com/levrik/mdi-react/).
+
+
+## Used resources
+
+- [Material Design Icons](https://materialdesignicons.com/)
+- [Vue.js](https://vuejs.org/)
