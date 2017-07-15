@@ -16,6 +16,58 @@ npm install --save mdi-vue
 ```
 yarn add mdi-vue
 ```
+### Import and usage
+
+Simply import the icon you wish to use to yout vue project with the CommonJS syntax like in the following examples:  
+
+```js
+require('mdi-vue/HotelIcon');
+
+import 'mdi-vue/CommentAlertIcon';
+```
+
+Note here, that the icons are automatically registered as components to Vuejs, so you can use the freshly imported icons within
+your templates as any other component. The naming syntax of these components is always `mdi-<kebab-cased-icon-name>-icon`.
+  
+Example.vue:  
+```vue
+<template>
+  <div>
+    My hand is a <mdi-hook-icon />
+  </div>
+</template>
+
+<script>
+  import 'mdi-vue/HookIcon'
+</script>
+```
+
+
+### Custom icon names 
+
+If you don't like the generated names, you can bind the icons manually to the vue instance as in this example:
+
+CustomIconName.vue:
+```vue
+<template>
+  <div>
+    I am <custom-icon-name />. Pleased to meet you
+  </div>
+</template>
+
+<script>
+  import CustomIconName from 'mdi-vue/EmoticonHappyIcon'
+
+  export default {
+    component: {
+      CustomIconName,
+    },
+  }
+</script>
+```
+
+Note that the icons still get imported by their original names too.
+
 
 ## Example
 
@@ -28,6 +80,7 @@ new Vue({
   template: '<span><mdi-human-icon /></span>'
 })
 ```
+
 
 
 Heavily inspired by [mdi-react](https://github.com/levrik/mdi-react/).
