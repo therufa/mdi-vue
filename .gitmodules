@@ -1,3 +1,6 @@
 [submodule "mdi"]
 	path = mdi
 	url = git@github.com:Templarian/MaterialDesign.git
+[submodule "example"]
+	path = example
+  url = git@github.com:therufa/mdi-vue-example.git
