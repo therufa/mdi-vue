@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 export default Vue.component('mdi-{{icon}}-icon', {
-  template: '<svg :class="[\'mdi-icon\', className]" :width="width" :height="height" :view-box="viewBox"><path {{path}}/></svg>',
+  template: '<svg :class="[\'mdi-icon\', className]" :width="width" :height="height" :viewBox="viewBox"><path {{path}}/></svg>',
   props: {
     className: [Object, Array, String],
     width: {
