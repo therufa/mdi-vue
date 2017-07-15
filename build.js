@@ -1,5 +1,6 @@
-const path  = require('path')
-const fs    = require('fs')
+const path      = require('path')
+const fs        = require('fs')
+const kebabCase = require('lodash').kebabCase
 
 const buildPath   = path.resolve(__dirname, 'build')
 const distPath    = path.resolve(__dirname, 'dist')
@@ -33,7 +34,7 @@ const buildIcons = (components) => fs.readFile(path.resolve('./build.tpl'), (err
     fs.writeFileSync(
       path.join(buildPath,`${component.name}Icon.js`),
       tpl.toString('utf-8')
-        .replace(/\{\{icon\}\}/g, component.name.toLowerCase())
+        .replace(/\{\{icon\}\}/g, kebabCase(component.name))
         .replace(/\{\{path\}\}/g, component.path)
     )
   }
