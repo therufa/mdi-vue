@@ -1,6 +1,6 @@
 {
   "name": "mdi-vue",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Material Design Icons for Vue.js",
   "main": "index.js",
   "repository": "git@github.com:therufa/mdi-vue.git",
@@ -24,7 +24,7 @@
     "clean": "rm -rf build dist",
     "prebuild": "git submodule update --init && npm run clean && mkdir build dist",
     "build": "node build.js && babel build --out-dir dist && cp *LICENSE dist && cp *.md dist",
-    "prepublish": "cd .. && npm run build && cd ./dist"
+    "release": "node ./node_modules/.bin/standard-version"
   },
   "peerDependencies": {
     "vue": "^2.3.3"
@@ -35,6 +35,7 @@
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.24.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "standard-version": "^4.2.0"
   }
 }
