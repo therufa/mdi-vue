@@ -37,5 +37,8 @@
     "babel-register": "^6.24.1",
     "lodash": "^4.17.4",
     "standard-version": "^4.2.0"
+  },
+  "dependencies": {
+    "json-format": "^1.0.1"
   }
 }
