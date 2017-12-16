@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.10"></a>
+## [0.2.10](https://github.com/therufa/mdi-vue/compare/v0.2.9...v0.2.10) (2017-12-16)
+
+
+### Bug Fixes
+
+* **build.js:** handle promise in icon build ([5fb525e](https://github.com/therufa/mdi-vue/commit/5fb525e))
+
+
+
 <a name="0.2.9"></a>
 ## [0.2.9](https://github.com/therufa/mdi-vue/compare/v0.2.8...v0.2.9) (2017-12-08)
 
