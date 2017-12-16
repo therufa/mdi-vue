@@ -65,15 +65,15 @@ const writeIconComponents = async (buildPath, components) => {
 }
 
 const buildIconBodyList = (svgPath, svgList) => {
-  return svgList.map(svg => ({
+  return Promise.all(svgList.map(async svg => ({
     name: toPascalCase(svg).slice(0, -4),
-    path: async () => {
+    path: await (async () => {
       const svgFile = await readFileAsync(path.join(svgPath, svg))
       const matches = /\sd="(.*)"/.exec(svgFile)
 
       return matches ? matches[0] : undefined
-    }
-  }))
+    })()
+  })))
 }
 
 fs.readdir(SVG_PATH, async (err, svgList) => {
@@ -81,7 +81,7 @@ fs.readdir(SVG_PATH, async (err, svgList) => {
     throw new Error(err)
   }
 
-  const svgBodyList = buildIconBodyList(SVG_PATH, svgList)
+  const svgBodyList = await buildIconBodyList(SVG_PATH, svgList)
   const iconComponents = await buildIconComponents(TPL_PATH, svgBodyList)
   await writeIconComponents(BUILD_PATH, iconComponents)
   await copyPackage(PKG_FILE, path.resolve(DIST_PATH, 'package.json'))
