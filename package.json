@@ -19,7 +19,7 @@
     "icon",
     "material-design",
     "material design",
-    "material design icons",
+    "material design icons"
   ],
   "bugs": {
     "url": "https://github.com/therufa/mdi-vue/issues"
@@ -32,7 +32,7 @@
     "build": "node build.js && babel build --out-dir dist && cp *LICENSE dist && cp *.md dist",
     "release": "node ./node_modules/.bin/standard-version"
   },
-  "peerDependencies": {
+  "dependencies": {
     "vue": "^2.3.3"
   },
   "devDependencies": {
