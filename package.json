@@ -16,7 +16,10 @@
     "material",
     "design",
     "icons",
-    "icon"
+    "icon",
+    "material-design",
+    "material design",
+    "material design icons",
   ],
   "bugs": {
     "url": "https://github.com/therufa/mdi-vue/issues"
