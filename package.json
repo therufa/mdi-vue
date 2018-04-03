@@ -1,6 +1,6 @@
 {
   "name": "mdi-vue",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "Material Design Icons for Vue.js",
   "main": "./dist/index.js",
   "directories": {
