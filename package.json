@@ -7,7 +7,7 @@
     "lib": "./dist/"
   },
   "repository": "git@github.com:therufa/mdi-vue.git",
-  "homepage": "github.com/therufa/mdi-vue",
+  "homepage": "https://github.com/therufa/mdi-vue",
   "keywords": [
     "mdi",
     "vue",

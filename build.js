@@ -71,7 +71,7 @@ const buildIconBodyList = (svgPath, svgList) => {
       const svgFile = await readFileAsync(path.join(svgPath, svg))
       const matches = /\sd="(.*)"/.exec(svgFile)
 
-      return matches ? matches[0] : undefined
+      return matches ? matches[1] : undefined
     })()
   })))
 }
