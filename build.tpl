@@ -5,11 +5,11 @@ export default Vue.component('mdi-{{icon}}-icon', {
   props: {
     className: [Object, Array, String],
     width: {
-      type: Number,
+      type: [Number, String],
       'default': 24
     },
     height: {
-      type: Number,
+      type: [Number, String],
       'default': 24
     },
     viewBox: {
