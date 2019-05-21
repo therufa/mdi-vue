@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.15"></a>
+## [0.2.15](https://github.com/therufa/mdi-vue/compare/v0.2.14...v0.2.15) (2019-05-21)
+
+
+### Bug Fixes
+
+* **Template:** add string type to width and height props ([db66204](https://github.com/therufa/mdi-vue/commit/db66204))
+
+
+
 <a name="0.2.14"></a>
 ## [0.2.14](https://github.com/therufa/mdi-vue/compare/v0.2.13...v0.2.14) (2018-04-03)
 
