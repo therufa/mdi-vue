@@ -21,9 +21,9 @@ yarn add mdi-vue
 Simply import the icon you wish to use to yout vue project with the CommonJS syntax like in the following examples:  
 
 ```js
-require('mdi-vue/HotelIcon');
+require('mdi-vue/dist/HotelIcon');
 
-import 'mdi-vue/CommentAlertIcon';
+import 'mdi-vue/dist/CommentAlertIcon';
 ```
 
 Note here, that the icons are automatically registered as components to Vuejs, so you can use the freshly imported icons within
@@ -38,7 +38,7 @@ Example.vue:
 </template>
 
 <script>
-  import 'mdi-vue/HookIcon'
+  import 'mdi-vue/dist/HookIcon'
 </script>
 ```
 
@@ -56,7 +56,7 @@ CustomIconName.vue:
 </template>
 
 <script>
-  import CustomIconName from 'mdi-vue/EmoticonHappyIcon'
+  import CustomIconName from 'mdi-vue/dist/EmoticonHappyIcon'
 
   export default {
     component: {
