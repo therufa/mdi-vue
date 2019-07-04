@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.30"></a>
+## [0.2.30](https://github.com/therufa/mdi-vue/compare/v0.2.29...v0.2.30) (2019-07-04)
+
+
+### Bug Fixes
+
+* add dist folder by default ([d408d6c](https://github.com/therufa/mdi-vue/commit/d408d6c))
+
+
+
 <a name="0.2.29"></a>
 ## [0.2.29](https://github.com/therufa/mdi-vue/compare/v0.2.28...v0.2.29) (2019-07-04)
 
