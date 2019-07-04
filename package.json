@@ -3,6 +3,7 @@
   "version": "0.2.19",
   "description": "Material Design Icons for Vue.js",
   "main": "./dist/index.js",
+  "files": ["./dist/"],
   "directories": {
     "lib": "./dist/"
   },
@@ -29,7 +30,7 @@
   "scripts": {
     "clean": "rm -rf build dist",
     "prebuild": "git submodule update --init && npm run clean && mkdir build dist",
-    "build": "node build.js && babel build --out-dir dist && cp *LICENSE dist && cp *.md dist",
+    "build": "node build.js && babel build --out-dir dist && rimraf build",
     "release": "node ./node_modules/.bin/standard-version"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "babel-register": "^6.24.1",
     "json-format": "^1.0.1",
     "lodash": "^4.17.4",
+    "rimraf": "^2.6.3",
     "standard-version": "^4.2.0"
   }
 }
