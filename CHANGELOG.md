@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.29"></a>
+## [0.2.29](https://github.com/therufa/mdi-vue/compare/v0.2.28...v0.2.29) (2019-07-04)
+
+
+
 <a name="0.2.28"></a>
 ## [0.2.28](https://github.com/therufa/mdi-vue/compare/v0.2.27...v0.2.28) (2019-07-04)
 
