@@ -21,26 +21,6 @@ function toPascalCase (str) {
     .join('')
 }
 
-const clearPackage = packageData => {
-  return Object.keys(packageData).reduce((p, key) => {
-    if (!/devDependencies|dependencies/.test(key)) {
-      return { ...p, [key]: packageData[key] }
-    }
-
-    return p
-  }, {})
-}
-
-const copyPackage = async (sourcePath, targetPath) => {
-  const packageData = await readFileAsync(sourcePath, { encoding: 'utf8' })
-  const cleanPackageData = clearPackage(JSON.parse(packageData))
-
-  writeFileAsync(targetPath, jsonFormat(cleanPackageData, {
-    type: 'space',
-    size: 2
-  }))
-}
-
 const populateTemplate = (template, component) => {
   return {
     name: component.name,
@@ -84,5 +64,4 @@ fs.readdir(SVG_PATH, async (err, svgList) => {
   const svgBodyList = await buildIconBodyList(SVG_PATH, svgList)
   const iconComponents = await buildIconComponents(TPL_PATH, svgBodyList)
   await writeIconComponents(BUILD_PATH, iconComponents)
-  await copyPackage(PKG_FILE, path.resolve(DIST_PATH, 'package.json'))
 })
