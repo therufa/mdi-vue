@@ -4,7 +4,7 @@
   "description": "Material Design Icons for Vue.js",
   "main": "./dist/index.js",
   "files": [
-    "./dist/"
+    "./dist/*"
   ],
   "directories": {
     "lib": "./dist/"
