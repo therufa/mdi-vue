@@ -30,7 +30,7 @@
     "clean": "rimraf build dist",
     "prebuild": "git submodule update --init && npm run clean && mkdir build dist",
     "build": "node build.js && babel build --out-dir dist",
-    "release": "node ./node_modules/.bin/standard-version && cp ./package.json dist"
+    "release": "node ./node_modules/.bin/standard-version && cp ./package.json dist && cp ./README.md dist"
   },
   "dependencies": {
     "vue": "^2.3.3"
