@@ -1,67 +1,89 @@
+'use strict'
+
+const fsp = require('fs').promises
 const path = require('path')
-const fs = require('fs')
-const jsonFormat = require('json-format')
-const { promisify } = require('util')
-const kebabCase = require('lodash').kebabCase
+const makeDir = require('make-dir')
+const rollup = require('rollup')
+const rollupPluginVue = require('rollup-plugin-vue')
+const rollupPluginCjs = require('rollup-plugin-commonjs')
+const mdi = require('@mdi/js')
+const kebabCase = require('lodash/kebabCase')
+const template = require('./template.js')
 
-const readFileAsync = promisify(fs.readFile)
-const writeFileAsync = promisify(fs.writeFile)
+// No magic
+const Paths = Object.freeze({
+  Dist: path.resolve('dist')
+})
 
-const BUILD_PATH = path.resolve(__dirname, 'build')
-const DIST_PATH = path.resolve(__dirname, 'dist')
-const SVG_PATH = path.resolve(__dirname, 'mdi/icons/svg')
-const TPL_PATH = path.resolve(__dirname, 'build.tpl')
-const PKG_FILE = path.resolve(__dirname, 'package.json')
+const rollupConfig = [
+  Object.freeze({
+    format: 'esm',
+    dir: Paths.Dist,
+    entryFileNames: '[name].esm.js'
+  }),
+  // Object.freeze({
+  //   format: 'iife',
+  //   dir: Paths.Dist,
+  //   entryFileNames: '[name].js'
+  // })
+]
 
-function toPascalCase (str) {
-  return str
-    .toLowerCase()
-    .split(/-/g)
-    .map(token => token.charAt(0).toUpperCase() + token.slice(1))
-    .join('')
+
+// Magic
+async function compile({ inputOpts, outputOpts }) {
+  console.log(`compiling '${outputOpts.format}' modules`)
+
+  const bundle = await rollup.rollup(inputOpts)
+
+  await bundle.generate(outputOpts)
+  await bundle.write(outputOpts)
 }
 
-const populateTemplate = (template, component) => {
-  return {
-    name: component.name,
-    content: template
-      .replace(/\{\{icon\}\}/g, kebabCase(component.name))
-      .replace(/\{\{path\}\}/g, component.path)
-  }
-}
+function compileInit(listOfComponents) {
+  console.log(`compiling ${listOfComponents.length} icons`)
 
-const buildIconComponents = async (templatePath, components) => {
-  const template = await readFileAsync(templatePath)
-
-  return components.map(component =>
-    populateTemplate(template.toString('utf-8'), component)
+  return rollupConfig.map((output) =>
+    compile({
+      inputOpts: {
+        plugins: [
+          rollupPluginCjs(),
+          rollupPluginVue()
+        ],
+        input: listOfComponents,
+      },
+      outputOpts: output
+    })
   )
 }
 
-const writeIconComponents = async (buildPath, components) => {
-  components.forEach(component => {
-    writeFileAsync(path.join(buildPath, `${component.name}Icon.js`), component.content)
-  })
+async function build() {
+  console.log('Building Material Design Icons')
+  await makeDir(Paths.Dist)
+
+  const listOfComponents = Object.entries(mdi).slice(1)
+    .map(async ([key, svgPath]) => {
+      try {
+        const [raw, name] = key.match(/^mdi(\w+)/i)
+        const fileName = path.resolve(Paths.Dist, `${name}.vue`)
+
+        const component = template(kebabCase(name), svgPath)
+
+        // HAHA! no error handlik! NO ERRR HANTLINK!!!
+        const fh = await fsp.open(fileName, 'w')
+        await fh.writeFile(component)
+        fh.close();
+
+        return fileName
+      } catch(e) {
+        console.error('I DON\'T CARE!')
+        console.error(e)
+      }
+    })
+
+  await compileInit(await Promise.all(listOfComponents))
+
+  // copy package.json & license files
 }
 
-const buildIconBodyList = (svgPath, svgList) => {
-  return Promise.all(svgList.map(async svg => ({
-    name: toPascalCase(svg).slice(0, -4),
-    path: await (async () => {
-      const svgFile = await readFileAsync(path.join(svgPath, svg))
-      const matches = /\sd="(.*)"/.exec(svgFile)
-
-      return matches ? matches[1] : undefined
-    })()
-  })))
-}
-
-fs.readdir(SVG_PATH, async (err, svgList) => {
-  if (err) {
-    throw new Error(err)
-  }
-
-  const svgBodyList = await buildIconBodyList(SVG_PATH, svgList)
-  const iconComponents = await buildIconComponents(TPL_PATH, svgBodyList)
-  await writeIconComponents(BUILD_PATH, iconComponents)
-})
+// Fun!
+build()
