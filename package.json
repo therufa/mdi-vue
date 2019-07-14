@@ -30,7 +30,7 @@
     "clean": "rimraf dist",
     "build": "node build",
     "release": "standard-version -a",
-    "prepublish": "node copy"
+    "postrelease": "node copy"
   },
   "dependencies": {
     "vue": "^2.6.10"
