@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/therufa/mdi-vue/compare/v0.2.31...v1.0.0) (2019-07-14)
+
+
+### Features
+
+* copy non-icon dependencies to dist folder ([146aebf](https://github.com/therufa/mdi-vue/commit/146aebf))
+* replace build and compile tools ([07e95c4](https://github.com/therufa/mdi-vue/commit/07e95c4))
+
+
+
 <a name="0.2.37"></a>
 ## [0.2.37](https://github.com/therufa/mdi-vue/compare/v0.2.35...v0.2.37) (2019-07-07)
 
