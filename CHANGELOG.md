@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/therufa/mdi-vue/compare/v1.0.0...v1.0.1) (2019-07-14)
+
+
+### Bug Fixes
+
+* ser correct copy order ([38d60bf](https://github.com/therufa/mdi-vue/commit/38d60bf))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/therufa/mdi-vue/compare/v0.2.31...v1.0.0) (2019-07-14)
 
