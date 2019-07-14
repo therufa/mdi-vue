@@ -9,22 +9,19 @@ const rollupPluginCjs = require('rollup-plugin-commonjs')
 const mdi = require('@mdi/js')
 const kebabCase = require('lodash/kebabCase')
 const template = require('./template.js')
+const Paths = require('./consts').Paths
 
 // No magic
-const Paths = Object.freeze({
-  Dist: path.resolve('dist')
-})
-
 const rollupConfig = [
   Object.freeze({
     format: 'esm',
     dir: Paths.Dist,
-    entryFileNames: '[name].esm.js'
+    entryFileNames: '[name].js'
   }),
   // Object.freeze({
   //   format: 'iife',
   //   dir: Paths.Dist,
-  //   entryFileNames: '[name].js'
+  //   entryFileNames: '[name].iife.js'
   // })
 ]
 
@@ -58,6 +55,7 @@ function compileInit(listOfComponents) {
 
 async function build() {
   console.log('Building Material Design Icons')
+  
   await makeDir(Paths.Dist)
 
   const listOfComponents = Object.entries(mdi).slice(1)
@@ -81,8 +79,6 @@ async function build() {
     })
 
   await compileInit(await Promise.all(listOfComponents))
-
-  // copy package.json & license files
 }
 
 // Fun!

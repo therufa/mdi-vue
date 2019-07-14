@@ -8,83 +8,64 @@ Enjoy!
 
 ## How to use
 
-Simply install it using npm or yarn:
+Simply install it using your favourite package manager
 
+eg: 
 ```
-npm install --save mdi-vue
+$ npm install --save mdi-vue
 ```
 ```
-yarn add mdi-vue
+$ yarn add mdi-vue
 ```
+
 ### Import and usage
 
-Simply import the icon you wish to use to yout vue project with the CommonJS syntax like in the following examples:  
+Simply import the icon you wish to use to your vue project with the CommonJS syntax like in the following examples:  
 
 ```js
-require('mdi-vue/HotelIcon');
+require('mdi-vue/Hotel.vue');
 
-import 'mdi-vue/CommentAlertIcon';
+import 'mdi-vue/CommentAlert.vue';
 ```
 
-Note here, that the icons are automatically registered as components to Vuejs, so you can use the freshly imported icons within
-your templates as any other component. The naming syntax of these components is always `mdi-<kebab-cased-icon-name>-icon`.
-  
 Example.vue:  
 ```vue
 <template>
   <div>
-    My hand is a <mdi-hook-icon />
+    My hand is a <hook-icon />
   </div>
 </template>
 
 <script>
-  import 'mdi-vue/HookIcon'
+import HookIcon 'mdi-vue/Hook' // works without an extension too
+
+export {
+  components: [
+    HookIcon,
+  ]
+}
 </script>
 ```
 
+## Global imports
 
-### Custom icon names 
-
-If you don't like the generated names, you can bind the icons manually to the vue instance as in this example:
-
-CustomIconName.vue:
-```vue
-<template>
-  <div>
-    I am <custom-icon-name />. Pleased to meet you
-  </div>
-</template>
-
-<script>
-  import CustomIconName from 'mdi-vue/EmoticonHappyIcon'
-
-  export default {
-    component: {
-      CustomIconName,
-    },
-  }
-</script>
-```
-
-Note that the icons still get imported by their original names too.
-
+Just as any component, icons can be registered globally using `Vue.component` as in the following example.
 
 ## Example
 
-```
+```js
 const Vue = require('vue')
-const HumanIcon = require('mdi-vue/HumanIcon')
+const HumanIcon = require('mdi-vue/Human.vue')
+
+Vue.component('human-icon', HumanIcon)
 
 new Vue({
   el: '#some-html-element',
-  template: '<span><mdi-human-icon /></span>'
+  template: '<human-icon />'
 })
 ```
 
-
-
 Heavily inspired by [mdi-react](https://github.com/levrik/mdi-react/).
-
 
 ## Used resources
 

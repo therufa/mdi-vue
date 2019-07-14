@@ -1,3 +1,5 @@
+'use static'
+
 module.exports = (name, path) => `
 <template>
   <span class="mdi mdi-${name}">
