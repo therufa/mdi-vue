@@ -6,7 +6,7 @@ module.exports = (name, path) => `
     <svg
       :width="width"
       :height="height"
-      :view-box="viewBox"
+      :viewBox="viewBox"
       :xmlns="xmlns"
     >
       <title>MDI ${name}</title>
