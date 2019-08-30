@@ -36,7 +36,7 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@mdi/js": "^3.7.95",
+    "@mdi/js": "^4.2.95",
     "json-format": "^1.0.1",
     "lodash": "^4.17.14",
     "make-dir": "^3.0.0",
