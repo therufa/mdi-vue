@@ -1,8 +1,9 @@
 'use static'
 
-module.exports = (name, path) => `<template functional>
-  <span class="mdi mdi-${name}">
+module.exports = (name, path, ariaLabel) => `<template functional>
+  <span class="mdi mdi-${name}" :role="props.role" :aria-label="props.ariaLabel">
     <svg
+      fill="currentColor"
       :width="props.width"
       :height="props.height"
       :viewBox="props.viewBox"
@@ -33,6 +34,14 @@ export default {
     xmlns: {
       type: String,
       default: 'xmlns="http://www.w3.org/2000/svg"'
+    },
+    ariaLabel: {
+      type: String,
+      default: '${ariaLabel} icon'
+    },
+    role: {
+      type: String,
+      default: 'img'
     }
   }
 }

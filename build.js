@@ -72,7 +72,7 @@ async function build() {
       const [raw, name] = key.match(/^mdi(\w+)/i)
       const fileName = path.resolve(Paths.Dist, `${name}.vue`)
 
-      const component = template(kebabCase(name), svgPath)
+      const component = template(kebabCase(name), svgPath, name)
 
       const fh = await fsp.open(fileName, 'w')
       await fh.writeFile(component)
