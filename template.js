@@ -1,12 +1,12 @@
 'use static'
 
-module.exports = (name, path) => `<template>
+module.exports = (name, path) => `<template functional>
   <span class="mdi mdi-${name}">
     <svg
-      :width="width"
-      :height="height"
-      :viewBox="viewBox"
-      :xmlns="xmlns"
+      :width="props.width"
+      :height="props.height"
+      :viewBox="props.viewBox"
+      :xmlns="props.xmlns"
     >
       <title>MDI ${name}</title>
       <path d="${path}" />
