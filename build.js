@@ -1,5 +1,6 @@
 'use strict'
 
+const cpus = require('os').cpus
 const fsp = require('fs').promises
 const path = require('path')
 const makeDir = require('make-dir')
@@ -28,29 +29,34 @@ const rollupConfig = [
 
 // Magic
 async function compile({ inputOpts, outputOpts }) {
-  console.log(`compiling '${outputOpts.format}' modules`)
-
   const bundle = await rollup.rollup(inputOpts)
 
   await bundle.generate(outputOpts)
   await bundle.write(outputOpts)
 }
 
-function compileInit(listOfComponents) {
-  console.log(`compiling ${listOfComponents.length} icons`)
+function compileInit(iconList) {
+  console.log(`compiling ${iconList.length} icons`)
+  const offset = cpus().length;
 
-  return rollupConfig.map((output) =>
-    compile({
-      inputOpts: {
-        plugins: [
-          rollupPluginCjs(),
-          rollupPluginVue()
-        ],
-        input: listOfComponents,
-      },
-      outputOpts: output
-    })
-  )
+  return rollupConfig.map(async (output) => {
+    let i = 0;
+
+    console.log(`compiling '${output.format}' modules`)
+
+    do {
+      await compile({
+        inputOpts: {
+          plugins: [
+            rollupPluginCjs(),
+            rollupPluginVue()
+          ],
+          input: iconList.slice(i, i + offset),
+        },
+        outputOpts: output
+      })
+    } while((i += offset) < iconList.length)
+  })
 }
 
 async function build() {
@@ -58,27 +64,28 @@ async function build() {
   
   await makeDir(Paths.Dist)
 
-  const listOfComponents = Object.entries(mdi).slice(1)
-    .map(async ([key, svgPath]) => {
-      try {
-        const [raw, name] = key.match(/^mdi(\w+)/i)
-        const fileName = path.resolve(Paths.Dist, `${name}.vue`)
+  const svgList = Object.entries(mdi).slice(1)
+  const iconList = []
 
-        const component = template(kebabCase(name), svgPath)
+  for(let [key, svgPath] of svgList) {
+    try {
+      const [raw, name] = key.match(/^mdi(\w+)/i)
+      const fileName = path.resolve(Paths.Dist, `${name}.vue`)
 
-        // HAHA! no error handlik! NO ERRR HANTLINK!!!
-        const fh = await fsp.open(fileName, 'w')
-        await fh.writeFile(component)
-        fh.close();
+      const component = template(kebabCase(name), svgPath)
 
-        return fileName
-      } catch(e) {
-        console.error('I DON\'T CARE!')
-        console.error(e)
-      }
-    })
+      const fh = await fsp.open(fileName, 'w')
+      await fh.writeFile(component)
+      fh.close();
 
-  await compileInit(await Promise.all(listOfComponents))
+      iconList.push(fileName)
+    } catch(e) {
+      console.error('I DON\'T CARE!')
+      console.error(e)
+    }
+  }
+
+  compileInit(iconList)
 }
 
 // Fun!
