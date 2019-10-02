@@ -9,7 +9,6 @@ module.exports = (name, path, ariaLabel) => `<template functional>
       :viewBox="props.viewBox"
       :xmlns="props.xmlns"
     >
-      <title>MDI ${name}</title>
       <path d="${path}" />
     </svg>
   </span>
