@@ -37,7 +37,7 @@ Example.vue:
 </template>
 
 <script>
-import HookIcon 'mdi-vue/Hook' // works without an extension too
+import HookIcon from 'mdi-vue/Hook' // works without an extension too
 
 export {
   components: [
