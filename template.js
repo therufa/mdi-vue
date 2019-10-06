@@ -9,6 +9,7 @@ module.exports = (name, path, ariaLabel) => `<template functional>
       :viewBox="props.viewBox"
       :xmlns="props.xmlns"
     >
+      <title v-if="title">{{ title }}</title>
       <path d="${path}" />
     </svg>
   </span>
@@ -41,6 +42,10 @@ export default {
     role: {
       type: String,
       default: 'img'
+    },
+    title: {
+      type: String,
+      required: false
     }
   }
 }
