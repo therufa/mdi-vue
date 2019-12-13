@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@mdi/js@^4.4.95":
-  version "4.4.95"
-  resolved "https://registry.yarnpkg.com/@mdi/js/-/js-4.4.95.tgz#615de98256273b1716dd1e32a6bc4dfdaba3c8a0"
-  integrity sha512-wCrur/ICoHP7/NcNboBCdqR64gQnoUKxSRla4uOsGC61jMUnUeDMNfU7PrA/I0IzvotWc0ws2cCNVL7JsOPh2Q==
+"@mdi/js@^4.7.95":
+  version "4.7.95"
+  resolved "https://registry.yarnpkg.com/@mdi/js/-/js-4.7.95.tgz#ddca3280bcda9e761ab9c9e0261ff360e2e0f99c"
+  integrity sha512-npzFZFA+PqNOuUkGjXRCvQ1lUet5lPuus5bi888+nXwqOYkGGqx/LzrKE3RLxrkc8ZTbF674UumMqq+R/RfBfw==
 
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.7"
