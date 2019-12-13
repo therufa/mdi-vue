@@ -1,7 +1,11 @@
 'use static'
 
 module.exports = (name, path, ariaLabel) => `<template functional>
-  <span class="mdi mdi-${name}" :role="props.role" :aria-label="props.ariaLabel">
+  <span
+    :class="[data.staticClass, 'mdi', 'mdi-${name}']"
+    :role="props.role"
+    :aria-label="props.ariaLabel"
+  >
     <svg
       fill="currentColor"
       :width="props.width"
