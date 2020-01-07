@@ -27,6 +27,8 @@
   "author": "Attila Max Ruf <therufa@gmail.com>",
   "license": "(MIT AND OFL-1.1)",
   "scripts": {
+    "lint": "standard",
+    "test": "standard",
     "clean": "rimraf dist",
     "build": "node build",
     "release": "standard-version -a",
@@ -48,6 +50,7 @@
     "rollup": "^1.16.7",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-vue": "^4.7.2",
+    "standard": "^14.3.1",
     "standard-version": "^7.0.1",
     "vue-runtime-helpers": "^1.1.2",
     "vue-template-compiler": "^2.6.10"

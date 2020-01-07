@@ -5,8 +5,7 @@ const path = require('path')
 const makeDir = require('make-dir')
 const Paths = require('./consts').Paths
 
-
-async function copyDependencies() {
+async function copyDependencies () {
   await makeDir(Paths.Dist)
 
   return Promise.all([
