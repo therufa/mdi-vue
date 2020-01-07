@@ -35,11 +35,11 @@
     "postrelease": "node copy"
   },
   "dependencies": {
-    "handlebars": "^4.5.3",
     "vue": "^2.6.10"
   },
   "devDependencies": {
     "@mdi/js": "^4.7.95",
+    "handlebars": "^4.5.3",
     "json-format": "^1.0.1",
     "lodash": "^4.17.14",
     "make-dir": "^3.0.0",
