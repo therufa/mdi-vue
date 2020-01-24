@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/therufa/mdi-vue/compare/v1.4.0...v1.4.2) (2020-01-24)
+
+
+### Bug Fixes
+
+* move handlebars to dev dependencies ([be750f7](https://github.com/therufa/mdi-vue/commit/be750f7d442a8c5cfec3c9006507cc76fd7c6793))
+
 ### [1.4.1](https://github.com/therufa/mdi-vue/compare/v1.4.0...v1.4.1) (2020-01-07)
 
 
