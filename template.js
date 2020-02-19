@@ -37,7 +37,7 @@ export default {
     },
     xmlns: {
       type: String,
-      default: 'xmlns="http://www.w3.org/2000/svg"'
+      default: 'http://www.w3.org/2000/svg'
     },
     ariaLabel: {
       type: String,
