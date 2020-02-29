@@ -13,7 +13,8 @@ async function copyDependencies () {
     'LICENSE',
     'MDI-LICENSE',
     'package.json',
-    'README.md'
+    'README.md',
+    'icons.css'
   ].map((fileName) => {
     const sourcePath = path.resolve(Paths.Root, fileName)
     const targetPath = path.resolve(Paths.Dist, fileName)
