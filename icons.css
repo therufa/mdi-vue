@@ -1,7 +1,3 @@
-.mdi {
-  display: flex;
-}
-
 .mdi > svg {
   vertical-align: middle;
 }
