@@ -54,4 +54,6 @@ export default {
   }
 }
 </script>
+
+<style src="./icons.css"/>
 `
