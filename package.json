@@ -35,24 +35,23 @@
     "postrelease": "node copy"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@mdi/js": "^4.7.95",
-    "handlebars": "^4.5.3",
+    "@mdi/js": "^5.0.45",
+    "handlebars": "^4.7.3",
     "json-format": "^1.0.1",
-    "lodash": "^4.17.14",
-    "make-dir": "^3.0.0",
+    "make-dir": "^3.0.2",
     "mem": "^6.0.1",
     "normalize.js": "^0.0.1",
-    "postcss": "^7.0.17",
-    "rimraf": "^3.0.0",
-    "rollup": "^1.16.7",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-vue": "^4.7.2",
-    "standard": "^14.3.1",
-    "standard-version": "^7.0.1",
+    "postcss": "^7.0.27",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.0.6",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-vue": "^5.1.6",
+    "standard": "^14.3.3",
+    "standard-version": "^7.1.0",
     "vue-runtime-helpers": "^1.1.2",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.11"
   }
 }
