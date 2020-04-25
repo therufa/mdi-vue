@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/therufa/mdi-vue/compare/v1.4.7...v1.5.0) (2020-04-25)
+
+
+### Features
+
+* add spin property ([38df4ec](https://github.com/therufa/mdi-vue/commit/38df4ecca55a4d0adc5724dd5beaf070357342cd))
+
 ### [1.4.7](https://github.com/therufa/mdi-vue/compare/v1.4.6...v1.4.7) (2020-04-22)
 
 ### [1.4.6](https://github.com/therufa/mdi-vue/compare/v1.4.5...v1.4.6) (2020-03-17)
