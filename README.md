@@ -32,12 +32,13 @@ Example.vue:
 ```vue
 <template>
   <div>
-    My hand is a <hook-icon />
+    My hand is a <HookIcon />
   </div>
 </template>
 
 <script>
-import HookIcon from 'mdi-vue/Hook' // works without an extension too
+import HookIcon from 'mdi-vue/Hook.vue' // raw vue component
+// import HookIcon from 'mdi-vue/Hook[.js]' // transpiled component
 
 export {
   components: [
@@ -46,6 +47,21 @@ export {
 }
 </script>
 ```
+
+## Props
+### width and height (Numeric)
+```
+  <Icon :width="30" :height="30 />
+```
+
+### spin (boolean; default: false)
+Applies a css spin animation to the icon
+```
+  <CogIcon spin />
+  // or
+  <CogIcon :spin="true" />
+```
+
 
 ## Global imports
 
