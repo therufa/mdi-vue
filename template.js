@@ -8,8 +8,8 @@ module.exports = (name, path, ariaLabel) => `<template functional>
   >
     <svg
       fill="currentColor"
-      :width="props.width"
-      :height="props.height"
+      :width="props.width || props.size"
+      :height="props.height || props.size"
       :viewBox="props.viewBox"
       :xmlns="props.xmlns"
     >
@@ -25,9 +25,13 @@ export default {
   props: {
     width: {
       type: [Number, String],
-      default: 24
+      default: null
     },
     height: {
+      type: [Number, String],
+      default: null
+    },
+    size: {
       type: [Number, String],
       default: 24
     },

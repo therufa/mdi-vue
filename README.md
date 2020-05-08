@@ -49,13 +49,25 @@ export {
 ```
 
 ## Props
-### width and height (Numeric)
+### width and height (numeric or string; default: 24)
 ```
   <Icon :width="30" :height="30 />
 ```
 
+### size (numeric or string; default: 24)
+Sets the width and the height of the of an icon, given that no with or height was provided to the icon itself
+```
+  <Icon size="64" />
+  <Icon :size="512" />
+```
+Since the `size` property serves as a fallback to both `width` and `height` properties the above examples are equal to the following ones
+```
+  <Icon width="64" height="64" />
+  <Icon :width="512" :height="512" />
+```
+
 ### spin (boolean; default: false)
-Applies a css spin animation to the icon
+Applies a css spin/rotate animation to the icon
 ```
   <CogIcon spin />
   // or
