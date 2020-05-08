@@ -1,6 +1,6 @@
 {
   "name": "mdi-vue",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Material Design Icons for Vue.js",
   "main": "./index.js",
   "files": [
@@ -53,5 +53,8 @@
     "standard-version": "^7.1.0",
     "vue-runtime-helpers": "^1.1.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "resolutions": {
+    "**/**/yargs-parser": "^18.1.2"
   }
 }
