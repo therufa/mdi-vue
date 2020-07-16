@@ -1,6 +1,7 @@
 # Material Design Icons for Vue.js
 
 ![npm](https://img.shields.io/npm/dw/mdi-vue)
+[![Edit MDI Vue demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/modest-greider-0ot9p?fontsize=14&hidenavigation=1&theme=dark)
 
 This library should grant an easy-to-use interface to icons from MDI.  
 Import only those icons you need, does not require further configuration. Install it and use it without bloating your source code.  
