@@ -2,7 +2,7 @@
 
 module.exports = (name, path, ariaLabel) => `<template functional>
   <span
-    :class="[data.staticClass, 'mdi', 'mdi-${name}', props.spin ? 'mdi-spin' : undefined]"
+    :class="[data.staticClass || '', 'mdi', 'mdi-${name}', props.spin ? 'mdi-spin' : undefined]"
     :role="props.role"
     :aria-label="props.ariaLabel"
   >
