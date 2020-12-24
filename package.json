@@ -24,37 +24,14 @@
     "url": "https://github.com/therufa/mdi-vue/issues"
   },
   "author": "Attila Max Ruf <therufa@gmail.com>",
-  "license": "(MIT AND OFL-1.1)",
+  "license": "MIT",
   "scripts": {
     "lint": "standard",
     "test": "standard",
-    "clean": "rimraf dist",
-    "build": "node build",
-    "release": "standard-version -a",
-    "postrelease": "node copy"
+    "release": "standard-version -a"
   },
   "dependencies": {
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
     "@mdi/js": "^5.6.55",
-    "dot-prop": "^5.1.1",
-    "handlebars": "^4.7.3",
-    "json-format": "^1.0.1",
-    "make-dir": "^3.0.2",
-    "mem": "^6.0.1",
-    "normalize.js": "^0.0.1",
-    "postcss": "^7.0.27",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.21.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-vue": "^5.1.6",
-    "standard": "^14.3.3",
-    "standard-version": "^8.0.2",
-    "vue-runtime-helpers": "^1.1.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "resolutions": {
-    "**/**/yargs-parser": "^18.1.2"
+    "vue": "^2.6.11"
   }
 }
