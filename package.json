@@ -1,25 +1,24 @@
 {
   "name": "mdi-vue",
-  "version": "1.8.1",
+  "version": "2.0.0",
   "description": "Material Design Icons for Vue.js",
-  "main": "./index.js",
+  "main": "./main.js",
   "files": [
     "*"
   ],
   "repository": "git@github.com:therufa/mdi-vue.git",
   "homepage": "https://github.com/therufa/mdi-vue",
   "keywords": [
+    "material design icons",
+    "vue 3",
     "mdi",
     "vue",
     "vuejs",
     "vue.js",
-    "material",
-    "design",
     "icons",
     "icon",
     "material-design",
-    "material design",
-    "material design icons"
+    "material design"
   ],
   "bugs": {
     "url": "https://github.com/therufa/mdi-vue/issues"
