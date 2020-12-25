@@ -3,6 +3,7 @@ import * as mdi from '@mdi/js'
 import './icons.css'
 
 const vueVersion = Vue === undefined ? 3 : 2;
+const isV2 = vueVersion === 2
 
 const versionDependentOpts = Vue
   ? { functional: true } // for v2.x
@@ -11,40 +12,48 @@ const versionDependentOpts = Vue
 const ucFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
 function render(v2h, v2ctx) {
-  const data = vueVersion === 2 ? v2ctx.data : this
-  const props  = vueVersion === 2 ? v2ctx.props : this
-  const attrs = vueVersion === 2 ? v2ctx.attrs : this.$attrs
-  const h = vueVersion === 2 ? v2h : v3h
+  const data = isV2 ? v2ctx.data : this
+  const props = isV2 ? v2ctx.props : this
+  const attrs = isV2 ? v2ctx.attrs : this.$attrs
+  const h = isV2 ? v2h : v3h
   const iconPath = mdi[`mdi${ucFirst(props.name)}`] || mdi.mdiAlert
 
+  const spanAttrs = {
+    role: props.role,
+    'aria-label': props.ariaLabel,
+    ...attrs
+  }
+  const svgAttrs = {
+    fill: 'currentColor',
+    width: props.width || props.size,
+    height: props.height || props.size,
+    viewBox: props.viewBox,
+    xmlns: props.xmlns
+  }
+  const pathAttrs = {
+    d: iconPath
+  }
+
   return h('span', {
-    attrs: {
-      role: props.role,
-      ariaLabel: props.ariaLabel,
-      ...attrs
-    },
+    ...(isV2 ? { attrs: spanAttrs } : spanAttrs),
     class: {
-      ...(data.staticClass && {
-        [data.staticClass]: true,
-      }),
+      ...(
+        data.staticClass !== undefined
+          ? { [data.staticClass]: true }
+          : {}
+      ),
       [`mdi mdi-${props.name}`]: true,
       'mdi-spin': props.spin === true
     }
   }, [
-      h('svg', {
-        attrs: {
-          fill: 'currentColor',
-          width: props.width || props.size,
-          height: props.height || props.size,
-          viewBox: props.viewBox,
-          xmlns: props.xmlns
-        }
-      }, [
-        ...[props.title ? h('title', [props.title]) : undefined],
-          h('path', {
-          attrs: { d: iconPath }
-        })
-      ])
+    h('svg', {
+      ...(isV2 ? { attrs: svgAttrs } : svgAttrs)
+    }, [
+      ...[props.title ? h('title', [props.title]) : undefined],
+      h('path', {
+        ...(isV2 ? { attrs: pathAttrs } : pathAttrs)
+      })
+    ])
   ])
 }
 
