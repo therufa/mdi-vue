@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/therufa/mdi-vue/compare/v1.7.1...v2.1.0) (2020-12-25)
+
+
+### Features
+
+* rework lib to support both vue 2 and 3 as well as utilize tree shaking ([de9321a](https://github.com/therufa/mdi-vue/commit/de9321a0cad4453a05e4a8a923eff157eb95627a))
+
+
+### Bug Fixes
+
+* define version specific attribute objects ([fbe7f17](https://github.com/therufa/mdi-vue/commit/fbe7f174f9b46c5e5d6cac757cbf48485f51c137))
+
 ### [1.8.1](https://github.com/therufa/mdi-vue/compare/v1.7.1...v1.8.1) (2020-09-28)
 
 ### [1.7.1](https://github.com/therufa/mdi-vue/compare/v1.6.5...v1.7.1) (2020-08-22)
