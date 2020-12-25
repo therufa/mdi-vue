@@ -8,22 +8,36 @@ with the use of [Templarian's Material Desing Icons](https://github.com/Templari
 
 ## Breaking changes from 1.x to 2.x
 
-Since tree shaking is now much more widespread than it was at the birth of this lib, I decided to
-make use of it. This not only allowed me to reduce the package in size, but also to add support for
-Vue 3. The library also became a plugin instead.
+Since v2.x the library does not consist of generated components, but a wrapper specificly for the `@mdi/js`
+library and therefore comes in form of a plugin. 
 
-The new API is as simple as it gets:  
+Starting from version 2.1.2 the lib does not contain icon imports, these need to be provided upon 
+registration of the plugin. This allows to obtain control over the build size of your project,
+since the list of components can be determined by the developer percisely.
 
+**Vue 2 example**  
 ```
 import mdiVue from 'mdi-vue'
+import * as mdijs from '@mdi/js'
 
-// use according to your vue version
-Vue.use(mdiVue) // for v2.x
-createApp(App).use(mdiVue)... // for v3.x
+Vue.use(mdiVue, {
+  icons: mdijs
+}) 
+```
+
+**Vue 3 example**  
+```
+import { createApp } from 'vue'
+import * as mdijs from '@mdi/js'
+// `App` according to the vue 3 documentation
+
+createApp(App).use(mdiVue, {
+  icons: mdijs
+}) // etc...
 ```
 
 ```
-<mdicon name="name-of-icon" />
+<mdicon name="alert" />
 ```
 
 ### Installation
@@ -32,10 +46,10 @@ Simply install it using your favourite package manager
 
 eg: 
 ```
-$ npm install --save mdi-vue
+$ npm install --save mdi-vue @mdi/js
 ```
 ```
-$ yarn add mdi-vue
+$ yarn add mdi-vue @mdi/js
 ```
 
 ### Import and usage

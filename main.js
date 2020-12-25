@@ -1,5 +1,4 @@
 import Vue, { h as v3h } from 'vue'
-import * as mdi from '@mdi/js'
 import './icons.css'
 
 const vueVersion = Vue === undefined ? 3 : 2;
@@ -11,7 +10,7 @@ const versionDependentOpts = Vue
 
 const ucFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
-function render(v2h, v2ctx) {
+const renderWithIcons = mdi => function render(v2h, v2ctx) {
   const data = isV2 ? v2ctx.data : this
   const props = isV2 ? v2ctx.props : this
   const attrs = isV2 ? v2ctx.attrs : this.$attrs
@@ -58,7 +57,12 @@ function render(v2h, v2ctx) {
 }
 
 export default {
-  install(app) {
+  install(app, { icons }) {
+
+    if (icons === undefined) {
+      throw new Error('Icons must be provided separately')
+    }
+  
     app.component('mdicon', {
       name: 'MDIcon',
       ...versionDependentOpts,
@@ -95,7 +99,7 @@ export default {
           default: false
         }
       },
-      render
+      render: renderWithIcons(icons)
     })
   }
 }
