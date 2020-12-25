@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/therufa/mdi-vue/compare/v2.1.0...v2.1.1) (2020-12-25)
+
+
+### Bug Fixes
+
+* add missing props ([c9bdb7f](https://github.com/therufa/mdi-vue/commit/c9bdb7f4af1e993eee3d230d48289799a33c4e27))
+
 ## [2.1.0](https://github.com/therufa/mdi-vue/compare/v1.7.1...v2.1.0) (2020-12-25)
 
 
