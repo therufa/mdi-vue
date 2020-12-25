@@ -67,6 +67,8 @@ export default {
         spin: [Boolean],
         width: [Number, String],
         height: [Number, String],
+        ariaLabel: [String],
+        staticClass: [String], // hides: property access warning for ts with vue 3
         name: {
           type: String,
           required: true,
