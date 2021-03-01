@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/therufa/mdi-vue/compare/v2.2.0...v2.2.1) (2021-03-01)
+
+
+### Bug Fixes
+
+* convert kebab case to @mdi/js compliant naming ([f5bb683](https://github.com/therufa/mdi-vue/commit/f5bb6834f69187a146f3554c0df133042702ab99))
+* include fallback icon ([71f21e8](https://github.com/therufa/mdi-vue/commit/71f21e8f2a3acd38328b61a809c96b4a77c98e2c))
+
 ## [2.2.0](https://github.com/therufa/mdi-vue/compare/v1.7.1...v2.2.0) (2020-12-25)
 
 
