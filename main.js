@@ -10,13 +10,14 @@ const versionDependentOpts = Vue
   : {} // for v3.x
 
 const ucFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+const toName = (str) => str.split('-').map(ucFirst).join('')
 
 const renderWithIcons = mdi => function render(v2h, v2ctx) {
   const data = isV2 ? v2ctx.data : this
   const props = isV2 ? v2ctx.props : this
   const attrs = isV2 ? v2ctx.attrs : this.$attrs
   const h = isV2 ? v2h : v3h
-  const iconPath = mdi[`mdi${ucFirst(props.name)}`] || mdiAlert
+  const iconPath = mdi[`mdi${toName(props.name)}`] || mdiAlert
 
   const spanAttrs = {
     role: props.role,
