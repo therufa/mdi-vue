@@ -28,6 +28,7 @@ Vue.use(mdiVue, {
 **Vue 3 example**  
 ```
 import { createApp } from 'vue'
+import mdiVue from 'mdi-vue'
 import * as mdijs from '@mdi/js'
 // `App` according to the vue 3 documentation
 
