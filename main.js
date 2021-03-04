@@ -4,8 +4,8 @@ import './icons.css'
 const { h: v3h } = require('vue') // import vue3's render function
 const isV2 = v3h === undefined
 
-const versionDependentOpts = Vue
-  ? { functional: true } // for v2.x
+const versionDependentOpts = (require('../vue/package.json').version.split('.',1)[0] < 3) 
+  ? { functional: true }  // for v2.x
   : {} // for v3.x
 
 const ucFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1)
