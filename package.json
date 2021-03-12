@@ -3,6 +3,7 @@
   "version": "2.2.2",
   "description": "Material Design Icons for Vue.js",
   "main": "./main.js",
+  "type": "module",
   "files": [
     "*"
   ],
@@ -27,7 +28,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "standard",
-    "test": "standard",
+    "test": "mocha",
     "release": "standard-version -a"
   },
   "dependencies": {
@@ -35,6 +36,8 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "chai": "^4.3.3",
+    "mocha": "^8.3.2",
     "standard-version": "^9.0.0"
   },
   "peerDependencies": {
