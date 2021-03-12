@@ -4,7 +4,7 @@ import './icons.css'
 const { h: v3h } = require('vue') // import vue3's render function
 const isV2 = v3h === undefined
 
-const versionDependentOpts = Vue
+const versionDependentOpts = isV2
   ? { functional: true } // for v2.x
   : {} // for v3.x
 
