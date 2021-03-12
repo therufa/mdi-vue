@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.2](https://github.com/therufa/mdi-vue/compare/v2.2.1...v2.2.2) (2021-03-12)
+
+
+### Bug Fixes
+
+* added missing import instruction in README ([67347b7](https://github.com/therufa/mdi-vue/commit/67347b76917328929c684cf4a6b0c5ff0688eb39))
+* refactor import of vue 3's render function ([46971bf](https://github.com/therufa/mdi-vue/commit/46971bfcd5f4a69eca6785c92d82fe6ae3b3ed2e)), closes [#50](https://github.com/therufa/mdi-vue/issues/50)
+* replace version check ([7b56c61](https://github.com/therufa/mdi-vue/commit/7b56c61b8f9de3d6d303e42e020f3fb1832be088))
+
 ### [2.2.1](https://github.com/therufa/mdi-vue/compare/v2.2.0...v2.2.1) (2021-03-01)
 
 
