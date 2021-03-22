@@ -43,7 +43,8 @@ const renderWithIcons = mdi => function render(v2h, v2ctx) {
           : {}
       ),
       [`mdi mdi-${props.name}`]: true,
-      'mdi-spin': props.spin === true
+      'mdi-spin': props.spin === true,
+      ...data.class
     }
   }, [
     h('svg', {
