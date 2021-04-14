@@ -1,4 +1,4 @@
-import { getAttrs, getClass, getInstall } from './shared'
+import { getAttrs, getClass, getInstall } from './src/shared.js'
 
 const renderV2 = mdi => function render(h, { data, props, attrs }) {
   const {
@@ -9,7 +9,10 @@ const renderV2 = mdi => function render(h, { data, props, attrs }) {
 
   return h('span', {
     attrs: spanAttrs,
-    class: getClass(props, data)
+    class: {
+      ...getClass(props, data),
+      ...data.class
+    }
   }, [
     h('svg', {
       attrs: svgAttrs
@@ -22,8 +25,6 @@ const renderV2 = mdi => function render(h, { data, props, attrs }) {
   ])
 }
 
-export default {
-  install: getInstall(renderV2, {
-    functional: true
-  })
-}
+export default getInstall(renderV2, {
+  functional: true
+})

@@ -1,11 +1,12 @@
 {
   "name": "mdi-vue",
-  "version": "2.2.3",
+  "version": "3.0.0",
   "description": "Material Design Icons for Vue.js",
-  "main": "./src/index.js",
+  "main": "./index.js",
   "files": [
-    "./src/v2.js",
-    "./src/v3.js"
+    "./v2.js",
+    "./v3.js",
+    "./src/**/*"
   ],
   "repository": "git@github.com:therufa/mdi-vue.git",
   "homepage": "https://github.com/therufa/mdi-vue",
@@ -33,13 +34,13 @@
   },
   "dependencies": {
     "@mdi/js": "^5.6.55",
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "standard-version": "^9.0.0"
   },
   "peerDependencies": {
     "@mdi/js": "^5.6.55",
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   }
 }

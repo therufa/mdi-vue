@@ -1,5 +1,5 @@
 import { h } from 'vue'
-import { getAttrs, getClass, getInstall } from './shared'
+import { getAttrs, getClass, getInstall } from './src/shared.js'
 
 const renderV3 = mdi => function render() {
   const {
@@ -19,6 +19,4 @@ const renderV3 = mdi => function render() {
   ])
 }
 
-export default {
-  install: getInstall(renderV3)
-}
+export default getInstall(renderV3)
