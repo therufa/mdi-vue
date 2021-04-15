@@ -17,7 +17,7 @@ since the list of components can be determined by the developer percisely.
 
 **Vue 2 example**  
 ```
-import mdiVue from 'mdi-vue'
+import mdiVue from 'mdi-vue/v2'
 import * as mdijs from '@mdi/js'
 
 Vue.use(mdiVue, {
@@ -28,7 +28,7 @@ Vue.use(mdiVue, {
 **Vue 3 example**  
 ```
 import { createApp } from 'vue'
-import mdiVue from 'mdi-vue'
+import mdiVue from 'mdi-vue/v3'
 import * as mdijs from '@mdi/js'
 // `App` according to the vue 3 documentation
 
@@ -37,8 +37,9 @@ createApp(App).use(mdiVue, {
 }) // etc...
 ```
 
+For fun we add the react logo here
 ```
-<mdicon name="alert" />
+<mdicon name="react" /> 
 ```
 
 ### Installation
