@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/therufa/mdi-vue/compare/v2.2.2...v3.0.1) (2021-04-15)
+
+
+### Bug Fixes
+
+* add dynamic class prop to component ([4a8d8e3](https://github.com/therufa/mdi-vue/commit/4a8d8e39441628b809f7eca472b0bd251aaff4d3))
+
 ### [2.2.3](https://github.com/therufa/mdi-vue/compare/v2.2.2...v2.2.3) (2021-03-22)
 
 
