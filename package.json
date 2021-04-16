@@ -1,6 +1,6 @@
 {
   "name": "mdi-vue",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Material Design Icons for Vue.js",
   "main": "./main.js",
   "repository": "git@github.com:therufa/mdi-vue.git",
