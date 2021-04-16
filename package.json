@@ -29,13 +29,13 @@
   },
   "dependencies": {
     "@mdi/js": "^5.6.55",
-    "vue": "^2.6.12"
+    "vue": "*"
   },
   "devDependencies": {
     "standard-version": "^9.0.0"
   },
   "peerDependencies": {
     "@mdi/js": "^5.6.55",
-    "vue": "^2.6.12"
+    "vue": "*"
   }
 }
