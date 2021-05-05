@@ -5,6 +5,7 @@ export const props = {
   height: [Number, String],
   ariaLabel: [String],
   staticClass: [String], // hides: property access warning for ts with vue 3
+  class: [String], // hides: property access warning for ts with vue 3
   name: {
     type: String,
     required: true,
