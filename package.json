@@ -28,10 +28,10 @@
     "release": "standard-version -a"
   },
   "dependencies": {
-    "@mdi/js": "^5.6.55"
+    "@mdi/js": "^5.6.55",
+    "standard-version": "^9.3.0"
   },
   "devDependencies": {
-    "standard-version": "^9.0.0",
     "vue": "*"
   },
   "peerDependencies": {
