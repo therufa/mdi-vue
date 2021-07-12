@@ -54,6 +54,19 @@ $ npm install --save mdi-vue @mdi/js
 $ yarn add mdi-vue @mdi/js
 ```
 
+## Installing Under Nuxt.js 
+
+Since the library isn't transpiled, the library needs to be added explicitly to
+build config.
+```
+export default {
+  // ...
+  build: {
+    transpile: ['mdi-vue']
+  }
+}
+```
+
 ### Import and usage
 MDIVue became a plugin with version 2.0 therefore it needs to be registered as such using the `.use` command.
 
