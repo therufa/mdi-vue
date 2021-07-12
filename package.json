@@ -29,9 +29,10 @@
   },
   "dependencies": {
     "@mdi/js": "^5.6.55",
-    "standard-version": "^9.3.0"
+    "standard-version": "9.3.0"
   },
   "devDependencies": {
+    "trim-newlines": "^3.0.1",
     "vue": "*"
   },
   "peerDependencies": {
