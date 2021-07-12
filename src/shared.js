@@ -33,6 +33,7 @@ export const getAttrs = (mdi, props_, attrs) => {
 
 export const getClass = (props_, data) => ({
   [data.staticClass || '']: true,
+  [data.class || '']: true,
   [`mdi mdi-${props_.name}`]: true,
   'mdi-spin': props_.spin === true,
 })
