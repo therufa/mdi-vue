@@ -28,15 +28,15 @@
     "release": "standard-version -a"
   },
   "dependencies": {
-    "@mdi/js": "^5.6.55",
-    "standard-version": "9.3.0"
+    "@mdi/js": "*"
   },
   "devDependencies": {
+    "standard-version": "9.3.0",
     "trim-newlines": "^3.0.1",
     "vue": "*"
   },
   "peerDependencies": {
-    "@mdi/js": "^5.6.55",
+    "@mdi/js": "*",
     "vue": "*"
   }
 }
