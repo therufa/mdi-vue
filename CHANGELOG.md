@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.8](https://github.com/therufa/mdi-vue/compare/v3.0.7...v3.0.8) (2021-10-18)
+
+
+### Bug Fixes
+
+* class binding for vue3 ([32b98d7](https://github.com/therufa/mdi-vue/commit/32b98d7c216d0cf43902bfc7951c18f1b25706cd))
+
 ### [3.0.7](https://github.com/therufa/mdi-vue/compare/v3.0.6...v3.0.7) (2021-05-07)
 
 ### [3.0.6](https://github.com/therufa/mdi-vue/compare/v3.0.5...v3.0.6) (2021-05-05)
