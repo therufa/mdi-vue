@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.9](https://github.com/therufa/mdi-vue/compare/v3.0.8...v3.0.9) (2021-10-25)
+
+
+### Bug Fixes
+
+* rename types folder to align with typescript default config ([a5ae3d2](https://github.com/therufa/mdi-vue/commit/a5ae3d24e1b0435f71a9a1d334b3f40840016ab3))
+
 ### [3.0.8](https://github.com/therufa/mdi-vue/compare/v3.0.7...v3.0.8) (2021-10-18)
 
 
