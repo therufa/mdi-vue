@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.11](https://github.com/therufa/mdi-vue/compare/v3.0.9...v3.0.11) (2021-10-29)
+
+
+### Bug Fixes
+
+* increase version number ([4e9c0d8](https://github.com/therufa/mdi-vue/commit/4e9c0d82a0dd36970ce5f633c5aa1c6a3da246ef))
+
 ### [3.0.9](https://github.com/therufa/mdi-vue/compare/v3.0.8...v3.0.9) (2021-10-29)
 
 ### [3.0.8](https://github.com/therufa/mdi-vue/compare/v3.0.7...v3.0.8) (2021-10-18)
